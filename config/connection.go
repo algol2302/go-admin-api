@@ -9,7 +9,7 @@ var DB *gorm.DB
 
 func Init() *gorm.DB {
 	// TODO use env variable for this:
-	dsn := "host=postgres_go_admin_db user=admin password=123456 dbname=go_admin port=5432 sslmode=disable"
+	dsn := "host=localhost user=admin password=123456 dbname=go_admin port=5432 sslmode=disable"
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
