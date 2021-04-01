@@ -26,12 +26,12 @@ func SetupRoutes() *gin.Engine {
 
 		v1.POST("/register", controller.RegisterEndPoint)
 
-		todo := v1.Group("todo")
+		users := v1.Group("users")
 		{
-			todo.GET("/all", authMiddleware.MiddlewareFunc(), controller.FetchAllUsers)
-			todo.GET("/get/:id", authMiddleware.MiddlewareFunc(), controller.FetchSingleUser)
-			todo.PUT("/update/:id", authMiddleware.MiddlewareFunc(), controller.UpdateUser)
-			todo.DELETE("/delete/:id", authMiddleware.MiddlewareFunc(), controller.DeleteUser)
+			users.GET("/all", authMiddleware.MiddlewareFunc(), controller.FetchAllUsers)
+			users.GET("/get/:id", authMiddleware.MiddlewareFunc(), controller.FetchSingleUser)
+			users.PUT("/update/:id", authMiddleware.MiddlewareFunc(), controller.UpdateUser)
+			users.DELETE("/delete/:id", authMiddleware.MiddlewareFunc(), controller.DeleteUser)
 		}
 	}
 
