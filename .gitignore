@@ -1,3 +1,7 @@
+# IDE
+.vscode
+.idea
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -15,7 +19,6 @@
 # vendor/
 
 .env
-.idea
 /go-admin-api
 go_build_github_com_algol2302_go_admin_api
 main
